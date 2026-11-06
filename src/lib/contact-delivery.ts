@@ -9,7 +9,7 @@ import type { ContactInput } from "@/lib/contact-schema";
  *
  *   RESEND_API_KEY=re_...
  *   CONTACT_TO_EMAIL=you@yourdomain.com      (where enquiries go)
- *   CONTACT_FROM_EMAIL=FWD Studio <site@yourdomain.com>   (a verified sender)
+ *   CONTACT_FROM_EMAIL=Romano Web <site@yourdomain.com>   (a verified sender)
  *
  * Using Resend without your own domain: sign up at resend.com with the same
  * email as CONTACT_TO_EMAIL and send from "onboarding@resend.dev". Resend lets
@@ -65,7 +65,7 @@ export async function deliverContactMessage(
     ["Site language", locale === "es" ? "Spanish" : "English"],
   ];
   const html = `<div style="font-family:Arial,sans-serif;font-size:15px;color:#111;line-height:1.5">
-<p style="margin:0 0 16px;font-size:12px;letter-spacing:2px;color:#ff5a36">FWD STUDIO — NEW ENQUIRY</p>
+<p style="margin:0 0 16px;font-size:12px;letter-spacing:2px;color:#ff5a36">ROMANO WEB — NEW ENQUIRY</p>
 <table style="border-collapse:collapse;margin-bottom:20px">${rows
     .map(
       ([k, v]) =>

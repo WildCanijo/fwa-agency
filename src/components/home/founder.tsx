@@ -34,7 +34,7 @@ export function Founder({ t }: { t: FounderCopy }) {
           <span aria-hidden="true" className="absolute -right-1.5 -bottom-1.5 size-3 border-r border-b border-accent" />
           <figcaption className="label-mono mt-4 flex justify-between text-[10px] text-muted">
             <span>{site.owner}</span>
-            <span className="text-accent">FWD/01</span>
+            <span className="text-accent">RW/01</span>
           </figcaption>
         </figure>
       </Reveal>

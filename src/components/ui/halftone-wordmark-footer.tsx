@@ -8,7 +8,7 @@
 // it and the dots part around the pointer on springs, warming in colour as they
 // are pushed off their place; click and a shock ring runs through the word.
 //
-// Changes for FWD Studio (the canvas engine is untouched):
+// Changes for Romano Web (the canvas engine is untouched):
 // - `fontFamily` may be a CSS variable, e.g. "var(--font-grotesk)". It is
 //   resolved at runtime, because canvas fonts can't read CSS variables and
 //   next/font generates the family name.
@@ -173,6 +173,7 @@ const HWF_CSS = `
 .hwf-brand span { opacity: .55; }
 .hwf-col h3 { margin: 0; font: inherit; opacity: .5; font-weight: 500; }
 .hwf-col ul { list-style: none; margin: 0; padding: 0; }
+.hwf-col a { overflow-wrap: anywhere; }
 .hwf-col a, .hwf-up {
   color: inherit; text-decoration: none; opacity: .8; background: none; border: 0; padding: 0;
   font: inherit; letter-spacing: inherit; text-transform: inherit; cursor: pointer;

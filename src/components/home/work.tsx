@@ -30,21 +30,21 @@ type Project = {
 const projects: Project[] = [
   {
     name: "Ridgeline Builders",
-    url: "ridgeline-concept.fwd",
+    url: "ridgeline.concept",
     Desktop: RidgelineDesktop,
     Mobile: RidgelineMobile,
     tint: "#d9a441",
   },
   {
     name: "Solace Physio",
-    url: "solace-concept.fwd",
+    url: "solace.concept",
     Desktop: SolaceDesktop,
     Mobile: SolaceMobile,
     tint: "#2f5d50",
   },
   {
     name: "Fieldnote",
-    url: "app.fieldnote-concept.fwd",
+    url: "app.fieldnote.concept",
     Desktop: FieldnoteDesktop,
     Mobile: FieldnoteMobile,
     tint: "#7aa2ff",

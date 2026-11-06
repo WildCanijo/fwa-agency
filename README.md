@@ -1,6 +1,6 @@
-# FWD Studio — website
+# Romano Web — website
 
-Marketing site for FWD Studio, an independent digital studio. Next.js 16 (App Router), React 19, TypeScript, Tailwind CSS 4, Motion.
+Marketing site for Romano Web, an independent digital studio. Next.js 16 (App Router), React 19, TypeScript, Tailwind CSS 4, Motion.
 
 ```bash
 npm install

@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* ------------------------------------------------------------------
-   FWD Studio design tokens
+   Romano Web design tokens
    ------------------------------------------------------------------ */
 /* Raw values live on :root so plain CSS, canvas code and Tailwind all share them. */
 :root {

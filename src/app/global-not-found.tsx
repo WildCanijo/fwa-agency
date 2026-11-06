@@ -4,7 +4,7 @@ import { paths } from "@/i18n/config";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "404 — FWD Studio",
+  title: "404 — Romano Web",
   description: "This page doesn't exist. / Esta página no existe.",
 };
 
@@ -16,7 +16,7 @@ export default function GlobalNotFound() {
       <body className="flex min-h-svh flex-col">
         <main className="px-gutter mx-auto flex w-full max-w-[1600px] flex-1 flex-col justify-center py-24">
           <a href={paths.en.home} className="text-[22px] leading-none font-extrabold tracking-[-0.04em] text-fg">
-            FWD<span className="text-accent">→</span>
+            ROMANO<span className="text-accent">→</span>
           </a>
           <p className="label-mono mt-16 text-accent">(404) — Page not found / Página no encontrada</p>
           <h1 className="mt-6 text-[clamp(3rem,10vw,9rem)] leading-[0.88] font-extrabold tracking-[-0.042em] [word-spacing:0.06em] text-fg uppercase">

@@ -19,15 +19,15 @@ export const budgetValues = ["Under $5k", "$5k – $10k", "$10k – $25k", "$25k
 
 const en = {
   meta: {
-    title: "FWD Studio — We build what moves you forward",
+    title: "Romano Web — We build what moves you forward",
     description:
-      "FWD Studio is an independent web development and digital design studio. Thoughtful design and serious development for small and medium-sized businesses.",
+      "Romano Web is an independent web development and digital design studio. Thoughtful design and serious development for small and medium-sized businesses.",
     ogLocale: "en_US",
   },
   common: {
-    fullName: "FWD Studio — Independent Digital Studio",
-    homeLabel: "FWD Studio, home",
-    studio: "Studio",
+    fullName: "Romano Web — Independent Digital Studio",
+    homeLabel: "Romano Web, home",
+    studio: "Web",
   },
   nav: {
     label: "Main",
@@ -43,7 +43,7 @@ const en = {
     language: "Language",
   },
   footer: {
-    meta: "© 2026 FWD Studio · Built with intention",
+    meta: "© 2026 Romano Web · Built with intention",
     note: "Move the cursor. Click the dots.",
     backToTop: "Back to top ↑",
     studio: "Studio",
@@ -55,7 +55,7 @@ const en = {
     contact: "Contact",
   },
   hero: {
-    meta: ["FWD Studio", "Independent Digital Studio", "Design / Development", "Taking on new projects"],
+    meta: ["Romano Web", "Independent Digital Studio", "Design / Development", "Taking on new projects"],
     // The last line gets an accent full stop and an arrow.
     lines: ["We build", "what moves", "you forward"],
     leadStrong: "Digital experiences designed with purpose and built with precision.",
@@ -144,17 +144,17 @@ const en = {
   },
   about: {
     label: "About",
-    srTitle: "About FWD Studio",
+    srTitle: "About Romano Web",
     side: "An independent digital studio",
     foundedBy: "Founded by",
     statement:
-      "Good design should do more than look good. It should make things clearer, easier, and more effective. FWD Studio brings design and development together to build digital experiences that help businesses move forward.",
+      "Good design should do more than look good. It should make things clearer, easier, and more effective. Romano Web brings design and development together to build digital experiences that help businesses move forward.",
     highlight: ["forward"],
     founder: {
       eyebrow: "Founder",
       role: "Software Engineer",
       photoAlt: "Portrait of Andoni Romano",
-      bio: "I'm Andoni Romano, a software engineer with 4+ years of experience building web applications, design systems and AI-powered products. I work across the whole build, from interface and reusable components to APIs, and I started FWD Studio to bring that same care to small and medium-sized businesses.",
+      bio: "I'm Andoni Romano, a software engineer with 4+ years of experience building web applications, design systems and AI-powered products. I work across the whole build, from interface and reusable components to APIs, and I started Romano Web to bring that same care to small and medium-sized businesses.",
       based: "Based in Mexico · Works in English and Spanish",
       focusTitle: "Focus",
       focus: ["Frontend architecture", "Design systems", "AI-powered apps", "Full-stack web"],
@@ -191,7 +191,7 @@ const en = {
   contact: {
     metaTitle: "Contact",
     metaDescription:
-      "Start a project with FWD Studio. Tell us about your business website, landing page, web application or redesign.",
+      "Start a project with Romano Web. Tell us about your business website, landing page, web application or redesign.",
     top: ["Contact", "Start a project"],
     // The last line gets an accent full stop.
     lines: ["Let's move", "forward"],
@@ -252,15 +252,15 @@ export type Dictionary = typeof en;
 
 const es: Dictionary = {
   meta: {
-    title: "FWD Studio — Construimos lo que te hace avanzar",
+    title: "Romano Web — Construimos lo que te hace avanzar",
     description:
-      "FWD Studio es un estudio independiente de desarrollo web y diseño digital. Diseño cuidadoso y desarrollo serio para pequeñas y medianas empresas.",
+      "Romano Web es un estudio independiente de desarrollo web y diseño digital. Diseño cuidadoso y desarrollo serio para pequeñas y medianas empresas.",
     ogLocale: "es_US",
   },
   common: {
-    fullName: "FWD Studio — Estudio Digital Independiente",
-    homeLabel: "FWD Studio, inicio",
-    studio: "Estudio",
+    fullName: "Romano Web — Estudio Digital Independiente",
+    homeLabel: "Romano Web, inicio",
+    studio: "Web",
   },
   nav: {
     label: "Principal",
@@ -276,7 +276,7 @@ const es: Dictionary = {
     language: "Idioma",
   },
   footer: {
-    meta: "© 2026 FWD Studio · Hecho con intención",
+    meta: "© 2026 Romano Web · Hecho con intención",
     note: "Mueve el cursor. Haz clic en los puntos.",
     backToTop: "Volver arriba ↑",
     studio: "Estudio",
@@ -288,7 +288,7 @@ const es: Dictionary = {
     contact: "Contacto",
   },
   hero: {
-    meta: ["FWD Studio", "Estudio Digital Independiente", "Diseño / Desarrollo", "Aceptando nuevos proyectos"],
+    meta: ["Romano Web", "Estudio Digital Independiente", "Diseño / Desarrollo", "Aceptando nuevos proyectos"],
     lines: ["Construimos", "lo que te hace", "avanzar"],
     leadStrong: "Experiencias digitales diseñadas con propósito y construidas con precisión.",
     lead: "Ayudamos a los negocios a fortalecer su presencia en línea con diseño cuidadoso y desarrollo serio.",
@@ -376,17 +376,17 @@ const es: Dictionary = {
   },
   about: {
     label: "Nosotros",
-    srTitle: "Sobre FWD Studio",
+    srTitle: "Sobre Romano Web",
     side: "Un estudio digital independiente",
     foundedBy: "Fundado por",
     statement:
-      "El buen diseño debe hacer más que verse bien. Debe hacer las cosas más claras, más fáciles y más efectivas. FWD Studio une diseño y desarrollo para crear experiencias digitales que ayudan a los negocios a avanzar.",
+      "El buen diseño debe hacer más que verse bien. Debe hacer las cosas más claras, más fáciles y más efectivas. Romano Web une diseño y desarrollo para crear experiencias digitales que ayudan a los negocios a avanzar.",
     highlight: ["avanzar"],
     founder: {
       eyebrow: "Fundador",
       role: "Ingeniero de software",
       photoAlt: "Retrato de Andoni Romano",
-      bio: "Soy Andoni Romano, ingeniero de software con más de 4 años de experiencia creando aplicaciones web, sistemas de diseño y productos con inteligencia artificial. Trabajo en todo el proceso, desde la interfaz y los componentes reutilizables hasta las APIs, y fundé FWD Studio para llevar ese mismo cuidado a pequeñas y medianas empresas.",
+      bio: "Soy Andoni Romano, ingeniero de software con más de 4 años de experiencia creando aplicaciones web, sistemas de diseño y productos con inteligencia artificial. Trabajo en todo el proceso, desde la interfaz y los componentes reutilizables hasta las APIs, y fundé Romano Web para llevar ese mismo cuidado a pequeñas y medianas empresas.",
       based: "Desde México · Trabajo en inglés y español",
       focusTitle: "Enfoque",
       focus: ["Arquitectura frontend", "Sistemas de diseño", "Apps con IA", "Desarrollo web full-stack"],
@@ -422,7 +422,7 @@ const es: Dictionary = {
   contact: {
     metaTitle: "Contacto",
     metaDescription:
-      "Inicia un proyecto con FWD Studio. Cuéntanos sobre tu sitio web, landing page, aplicación web o rediseño.",
+      "Inicia un proyecto con Romano Web. Cuéntanos sobre tu sitio web, landing page, aplicación web o rediseño.",
     top: ["Contacto", "Iniciar un proyecto"],
     lines: ["Avancemos", "juntos"],
     intro: "Cuéntanos un poco sobre tu proyecto. Te responderemos para conversar sobre cómo podemos ayudarte.",

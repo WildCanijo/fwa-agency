@@ -35,7 +35,7 @@ export function SiteFooter({ locale }: { locale: Locale }) {
 
   return (
     <HalftoneWordmarkFooter
-      wordmark="fwd"
+      wordmark="romano"
       label={dict.common.fullName}
       meta={t.meta}
       note={t.note}
@@ -47,7 +47,7 @@ export function SiteFooter({ locale }: { locale: Locale }) {
       fontWeight={800}
       monoFamily="var(--fwd-mono)"
       crop={0.22}
-      height="clamp(500px, 56vw, 740px)"
+      height="clamp(400px, 38vw, 580px)"
       className="border-t border-line"
     />
   );

@@ -3,7 +3,7 @@
 // Scramble Link Button — from 21st.dev (@hyperiux/scramble-link-button).
 // Built using Hyperiux Vault: https://vault.hyperiux.com
 //
-// Changes for FWD Studio:
+// Changes for Romano Web:
 // - Renders next/link, so internal routes don't do a full page reload.
 // - No viewport-based font size; size it with className like any text.
 // - Screen readers get the label once (the scrambling layer is aria-hidden).

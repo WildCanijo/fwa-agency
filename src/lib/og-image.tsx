@@ -23,7 +23,7 @@ export function renderOgImage({ label, lines }: { label: string; lines: string[]
         }}
       >
         <div style={{ display: "flex", justifyContent: "space-between", fontSize: 22, letterSpacing: 4, color: "#929292" }}>
-          <span style={{ color: "#f3f1ec" }}>FWD STUDIO</span>
+          <span style={{ color: "#f3f1ec" }}>ROMANO WEB</span>
           <span>{label.toUpperCase()}</span>
         </div>
         <div style={{ display: "flex", flexDirection: "column", fontSize: 104, fontWeight: 800, lineHeight: 0.9, letterSpacing: -4 }}>

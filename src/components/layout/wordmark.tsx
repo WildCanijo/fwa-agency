@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
-/** FWD wordmark: heavy grotesk letters, a forward arrow, and a mono descriptor. */
+/** Romano Web wordmark: heavy grotesk letters, a forward arrow, and a mono descriptor. */
 export function Wordmark({
   href,
   label,
@@ -18,7 +18,7 @@ export function Wordmark({
   return (
     <Link href={href} onClick={onClick} aria-label={label} className={cn("group flex items-baseline gap-2 text-fg", className)}>
       <span className="text-[22px] leading-none font-extrabold tracking-[-0.04em]">
-        FWD
+        ROMANO
         <span
           aria-hidden="true"
           className="ml-0.5 inline-block text-accent transition-transform duration-500 ease-swift group-hover:translate-x-1"

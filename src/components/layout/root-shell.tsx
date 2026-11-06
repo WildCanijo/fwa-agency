@@ -32,7 +32,7 @@ export function rootMetadata(locale: Locale): Metadata {
   const t = getDictionary(locale).meta;
   return {
     metadataBase: new URL(site.url),
-    title: { default: t.title, template: "%s — FWD Studio" },
+    title: { default: t.title, template: "%s — Romano Web" },
     description: t.description,
     applicationName: site.name,
     authors: [{ name: site.owner }],

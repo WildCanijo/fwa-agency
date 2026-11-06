@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: t.metaDescription,
   alternates: alternatesFor("contact", "en"),
   openGraph: {
-    title: `${t.metaTitle} — FWD Studio`,
+    title: `${t.metaTitle} — Romano Web`,
     description: t.intro,
     url: alternatesFor("contact", "en").canonical,
   },
