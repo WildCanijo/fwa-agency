@@ -1,26 +1,191 @@
 @import "tailwindcss";
 
+/* ------------------------------------------------------------------
+   FWD Studio design tokens
+   ------------------------------------------------------------------ */
+/* Raw values live on :root so plain CSS, canvas code and Tailwind all share them. */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --fwd-bg: #0b0b0b;
+  --fwd-bg-2: #121212;
+  --fwd-bg-3: #191919;
+  --fwd-fg: #f3f1ec;
+  --fwd-muted: #929292;
+  --fwd-accent: #ff5a36;
+  --fwd-line: rgba(255, 255, 255, 0.12);
+  --fwd-line-soft: rgba(255, 255, 255, 0.06);
+  --fwd-sans: var(--font-grotesk), "Helvetica Neue", Arial, sans-serif;
+  --fwd-mono: var(--font-mono-face), ui-monospace, Menlo, monospace;
+  --fwd-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --fwd-ease-swift: cubic-bezier(0.625, 0.05, 0, 1);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-bg: var(--fwd-bg);
+  --color-bg-2: var(--fwd-bg-2);
+  --color-bg-3: var(--fwd-bg-3);
+  --color-fg: var(--fwd-fg);
+  --color-muted: var(--fwd-muted);
+  --color-accent: var(--fwd-accent);
+  --color-line: var(--fwd-line);
+  --color-line-soft: var(--fwd-line-soft);
+
+  --font-sans: var(--fwd-sans);
+  --font-mono: var(--fwd-mono);
+
+  --ease-out-expo: var(--fwd-ease-out);
+  --ease-swift: var(--fwd-ease-swift);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  color-scheme: dark;
+  --gutter: clamp(20px, 3.4vw, 44px);
+  --nav-h: 64px;
+}
+
+html {
+  background: var(--fwd-bg);
+  scroll-padding-top: var(--nav-h);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--fwd-bg);
+  color: var(--fwd-fg);
+  font-family: var(--fwd-sans);
+  font-feature-settings: "ss01", "cv11";
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--fwd-accent);
+  color: var(--fwd-bg);
+}
+
+/* Visible, on-brand focus ring for keyboard users. */
+:focus-visible {
+  outline: 1px solid var(--fwd-accent);
+  outline-offset: 4px;
+}
+
+/* ------------------------------------------------------------------
+   Utilities
+   ------------------------------------------------------------------ */
+@utility px-gutter {
+  padding-inline: var(--gutter);
+}
+
+@utility label-mono {
+  font-family: var(--fwd-mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  line-height: 1.6;
+}
+
+/* Hero line reveal. Pure CSS so it runs before hydration. */
+@keyframes rise {
+  from {
+    transform: translate3d(0, 105%, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 12px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes nudge {
+  0%,
+  60%,
+  100% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(0.12em);
+  }
+}
+
+@keyframes marquee {
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.25;
+  }
+}
+
+.rise-line {
+  display: block;
+  overflow: hidden;
+  /* room for descenders so the mask doesn't clip them */
+  padding-bottom: 0.04em;
+}
+
+.rise-line > span {
+  display: block;
+  animation: rise 1.1s var(--fwd-ease-out) both;
+  animation-delay: calc(var(--i, 0) * 90ms + 120ms);
+}
+
+.fade-late {
+  animation: fade-in 1s ease both;
+  animation-delay: var(--d, 700ms);
+}
+
+.page-enter {
+  animation: page-enter 0.6s var(--fwd-ease-out) both;
+}
+
+.nudge {
+  display: inline-block;
+  animation: nudge 3.2s var(--fwd-ease-swift) infinite;
+}
+
+.marquee-track {
+  animation: marquee 38s linear infinite;
+}
+
+.pulse-dot {
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rise-line > span,
+  .fade-late,
+  .page-enter,
+  .nudge,
+  .marquee-track,
+  .pulse-dot {
+    animation: none !important;
+  }
 }
