@@ -1,6 +1,4 @@
 # Netlify build settings. These override whatever is set in the Netlify UI.
-# Netlify detects Next.js and adds its Next.js adapter automatically, which
-# serves the pages, the contact form's server actions and image optimization.
 
 [build]
   command = "npm run build"
@@ -9,3 +7,10 @@
 [build.environment]
   # Next.js 16 needs Node 20.9 or newer.
   NODE_VERSION = "22"
+
+# The Next.js adapter turns the .next build output into something Netlify can
+# serve (pages, server actions, image optimization). It's declared explicitly
+# because the previous deploy skipped it and published raw .next files, which
+# made every route return 404.
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
