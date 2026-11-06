@@ -1,5 +1,6 @@
 import "server-only";
 import type { ContactInput } from "@/lib/contact-schema";
+import { site } from "@/config/site";
 
 /**
  * INTEGRATION POINT — where contact form messages get delivered.
@@ -7,9 +8,12 @@ import type { ContactInput } from "@/lib/contact-schema";
  * Out of the box this sends email through Resend (https://resend.com) using
  * its REST API, with no extra packages. Set these in .env.local / your host:
  *
- *   RESEND_API_KEY=re_...
- *   CONTACT_TO_EMAIL=you@yourdomain.com      (where enquiries go)
- *   CONTACT_FROM_EMAIL=Romano Web <site@yourdomain.com>   (a verified sender)
+ *   RESEND_API_KEY=re_...                      (required)
+ *   CONTACT_TO_EMAIL=you@yourdomain.com        (optional, defaults to site.email)
+ *   CONTACT_FROM_EMAIL=site@yourdomain.com     (optional, defaults to onboarding@resend.dev)
+ *
+ * The sender's display name is always site.name ("Romano Web"), whatever name
+ * CONTACT_FROM_EMAIL carries, so a rename never needs a settings change.
  *
  * Using Resend without your own domain: sign up at resend.com with the same
  * email as CONTACT_TO_EMAIL and send from "onboarding@resend.dev". Resend lets
@@ -22,6 +26,13 @@ import type { ContactInput } from "@/lib/contact-schema";
  * when it wasn't.
  */
 
+/** "Name <a@b.com>" or "a@b.com" → "a@b.com". Falls back to Resend's test sender. */
+function senderAddress(value?: string) {
+  const match = value?.match(/<([^>]+)>/);
+  const address = (match ? match[1] : value)?.trim();
+  return address && address.includes("@") ? address : "onboarding@resend.dev";
+}
+
 export type DeliveryResult =
   | { ok: true }
   | { ok: false; reason: "not_configured" | "provider_error" };
@@ -31,13 +42,12 @@ export async function deliverContactMessage(
   locale: "en" | "es" = "en",
 ): Promise<DeliveryResult> {
   const apiKey = process.env.RESEND_API_KEY;
-  const to = process.env.CONTACT_TO_EMAIL;
-  const from = process.env.CONTACT_FROM_EMAIL;
+  const to = process.env.CONTACT_TO_EMAIL || site.email;
+  const from = `${site.name} <${senderAddress(process.env.CONTACT_FROM_EMAIL)}>`;
 
-  if (!apiKey || !to || !from) {
+  if (!apiKey) {
     console.warn(
-      "[contact] Form submitted but no email provider is configured. " +
-        "Set RESEND_API_KEY, CONTACT_TO_EMAIL and CONTACT_FROM_EMAIL (see src/lib/contact-delivery.ts).",
+      "[contact] Form submitted but RESEND_API_KEY is not set, so nothing was sent (see src/lib/contact-delivery.ts).",
     );
     return { ok: false, reason: "not_configured" };
   }

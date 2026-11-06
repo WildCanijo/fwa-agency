@@ -14,7 +14,7 @@ npm start        # serve the production build
 | What | Where |
 | --- | --- |
 | Real business email (shown on the site) | `src/config/site.ts` → `email` |
-| Real domain (canonical URLs, Open Graph) | `NEXT_PUBLIC_SITE_URL` env var, or `site.url` |
+| Site address (canonical URLs, Open Graph) | Automatic on Netlify; override with `NEXT_PUBLIC_SITE_URL` |
 | Contact form delivery | Add your Resend key to `RESEND_API_KEY` in `.env.local` (see Contact form below) |
 | Concept projects → real case studies | `src/components/home/work.tsx` (`projects` array) |
 | "Taking on new projects" label in the hero | `hero.meta` in `src/i18n/dictionaries.ts` (both languages) |
